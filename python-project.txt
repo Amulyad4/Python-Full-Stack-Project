@@ -1,0 +1,43 @@
+Blog Application :
+
+stores users, posts, comments, and likes. The backend handles data storage, retrieval, and authentication.
+
+— sign up and log in
+— create, edit, delete posts
+— comment on posts
+— like posts
+— posts of a particular author
+
+Tables :
+
+— USERS :  
+
+	id - Unique identifier for each user. Safe for APIs.	
+	email - User email
+	password - password for authentication
+	created_at - When the user was created
+
+— POSTS :
+
+	id - Unique identifier for each post
+	title - Post title
+	content - Post content/body
+	author_id - identifies the post author
+	created_at - When the post was created
+	updated_at - When the post was last edited
+
+— COMMENTS :
+
+	id - Unique comment ID
+	post_id - which post the comment belongs to
+	content - comment text
+	user_id - who wrote the comment
+	created_at - When comment was made
+
+— LIKES : 
+
+	id - Unique like ID
+	post_id - which post is liked
+	unique - Prevents multiple likes by the same user on the same post
+	user_id - who liked the post
+	created_at - When the like was given
