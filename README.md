@@ -1,21 +1,21 @@
-### Blog Application
+# Blog Application
 
 A backend-driven blog system that manages users, posts, comments, and likes. Handles user authentication, data storage, retrieval, and CRUD operations for posts. Built with Python and Supabase for a scalable, cloud-based backend.
 
-### Features 
+## Features 
 
-## User Management 
+### User Management 
 Sign up and log in securely, Passwords stored as hashed values
-## Posts
+### Posts
 Create, edit, and delete blog posts, View posts by all users, View posts by a particular author
-## Comments & Likes (Optional Enhancements)
+### Comments & Likes (Optional Enhancements)
 Users can comment on posts, Users can like posts, Each like is unique per user per post
-## Backend-First Design
+### Backend-First Design
 Fully functional Python backend connected to Supabase, Supports future frontend integration (React, HTML/Bootstrap, etc.)
-## Timestamps & Auditing
+### Timestamps & Auditing
 Track when users, posts, comments, and likes are created or updated
 
-### project structure
+## project structure
 
 BLOG APPLICATION/
 |
@@ -43,17 +43,17 @@ BLOG APPLICATION/
 - A supabase account
 - Git (push, cloning)
 
-### 1. clone or doenload the project
+## 1. clone or doenload the project
 
-# option 1 : clone with git 
+### option 1 : clone with git 
 git clone <repository-url>
 
-# option 2 : Download and extract the zip file
+### option 2 : Download and extract the zip file
 
-### 2. Install Dependencies
+## 2. Install Dependencies
 pip install -r requirements.txt
 
-### 3. Set-up Supabase Database
+## 3. Set-up Supabase Database
 1. create a supabase project
 2. create the tasks table
 - Go to sql editor in your supabase dashboard
@@ -68,20 +68,20 @@ pip install -r requirements.txt
     ```
 3. get your credentials :
 
-### 4. configure environment variables 
+## 4. configure environment variables 
 
 1. create a `.env` file in the project root.
 2. add your supabase credentials to `.env` :
     SUPABASE_URL=your_project_url_here
     SUPABASE_KEY=your_anon_key_here
 
-### 5.Run the Application
+## 5.Run the Application
 
-## streamlit frontend
+### streamlit frontend
 streamlit run front-end/app.py
 The app will open in thee browser at `http://localhost:8080`
 
-## FastApi backend
+### FastApi backend
 cd api
 python main.py
 
@@ -96,16 +96,16 @@ The API will open in thee browser at `http://localhost:8080`
     - database -> supabase (PostgreSQL - based backend-as-a-service)
     - Language -> python 3.8+
 
-### key components
+## key components
 
 1. **`src/db.py`** : database operation - handles all crud operations with supabase
 2. **`src/logic.py`** : buisness logic - task validation and procesing
 3. **`api/main.py`** : FastAPI endpoints - backend api
 4. **`front-end/app.py`** : streamlit web interface - frontend application
 
-### Trouble Shooting
+## Trouble Shooting
 
-## Common Issues
+### Common Issues
 
 1. **"Module not found" error**:
     - Make sure you've installed all dependencies: pip install -r requirements.txt*
