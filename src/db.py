@@ -1,4 +1,4 @@
-# db.py
+# src/db.py
 import os
 from supabase import create_client
 from dotenv import load_dotenv
@@ -9,11 +9,10 @@ key = os.getenv("SUPABASE_KEY")
 
 supabase = create_client(url, key)
 
-# user table
-
+# --- User functions ---
 def create_user(email, password):
     auth_res = supabase.auth.sign_up({"email": email, "password": password})
-    if auth_res.user:
+    if getattr(auth_res, "user", None):
         supabase.table("users").insert({
             "id": auth_res.user.id,
             "email": email
@@ -32,8 +31,7 @@ def update_user(user_id, email=None):
 def delete_user(user_id):
     return supabase.table("users").delete().eq("id", user_id).execute()
 
-# posts table
-
+# --- Post functions ---
 def create_post(title, content, author_id):
     return supabase.table("posts").insert({
         "title": title,
@@ -58,8 +56,7 @@ def update_post(post_id, title=None, content=None):
 def delete_post(post_id):
     return supabase.table("posts").delete().eq("id", post_id).execute()
 
-# comments table
-
+# --- Comment functions ---
 def create_comment(post_id, user_id, content):
     return supabase.table("comments").insert({
         "post_id": post_id,
@@ -79,8 +76,7 @@ def update_comment(comment_id, content=None):
 def delete_comment(comment_id):
     return supabase.table("comments").delete().eq("id", comment_id).execute()
 
-# likes table
-
+# --- Like functions ---
 def like_post(post_id, user_id):
     return supabase.table("likes").insert({
         "post_id": post_id,
