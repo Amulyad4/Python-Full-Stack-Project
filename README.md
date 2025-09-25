@@ -5,29 +5,29 @@ A backend-driven blog system that manages users, posts, comments, and likes. Han
 ## Features 
 
 ### User Management 
-Sign up and log in securely, Passwords stored as hashed values
+    Sign up and log in securely, Passwords stored as hashed values
 ### Posts
-Create, edit, and delete blog posts, View posts by all users, View posts by a particular author
+    Create, edit, and delete blog posts, View posts by all users, View posts by a particular author
 ### Comments & Likes (Optional Enhancements)
-Users can comment on posts, Users can like posts, Each like is unique per user per post
+    Users can comment on posts, Users can like posts, Each like is unique per user per post
 ### Backend-First Design
-Fully functional Python backend connected to Supabase, Supports future frontend integration (React, HTML/Bootstrap, etc.)
+    Fully functional Python backend connected to Supabase, Supports future frontend integration (React, HTML/Bootstrap, etc.)
 ### Timestamps & Auditing
-Track when users, posts, comments, and likes are created or updated
+    Track when users, posts, comments, and likes are created or updated
 
 ## project structure
 
 BLOG APPLICATION/
 |
 |___ src/                   # Core application logic 
-|   |___db.py              # database operations
-|   |___logic.py           # business logic and task
+|   |___db.py               # database operations
+|   |___logic.py            # business logic and task
 |
 |___ api/                   # backend API 
-|   |___main.py            # FastAPI endpoints
+|   |___main.py             # FastAPI endpoints
 |
 |___ front-end/             # Frontend application
-|   |___app.py             # streamlit web interface
+|   |___app.py              # streamlit web interface
 |
 |___ README.md              # Project documentation
 |___ requirements.txt       # Python dependencies 
@@ -43,7 +43,7 @@ BLOG APPLICATION/
 - A supabase account
 - Git (push, cloning)
 
-## 1. clone or doenload the project
+## 1. clone or download the project
 
 ### option 1 : clone with git 
 git clone <repository-url>
